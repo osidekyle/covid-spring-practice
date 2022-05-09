@@ -4,7 +4,39 @@ public class LocationStats {
 
     private String state;
     private String country;
+
+    public String getLatestTotalCasesString() {
+        return String.format("%,d",latestTotalCases);
+    }
+
+    public void setLatestTotalCasesString(String latestTotalCasesString) {
+        this.latestTotalCasesString = latestTotalCasesString;
+    }
+
+    public String getDiffFromPrevDayString() {
+        return String.format("%,d",diffFromPrevDay);
+    }
+
+    public void setDiffFromPrevDayString(String diffFromPrevDayString) {
+        this.diffFromPrevDayString = diffFromPrevDayString;
+    }
+
+    private String latestTotalCasesString;
+    private String diffFromPrevDayString;
+
+    private int diffFromPrevDay;
     private int latestTotalCases;
+
+
+    public int getDiffFromPrevDay() {
+        return diffFromPrevDay;
+    }
+
+    public void setDiffFromPrevDay(int diffFromPrevDay) {
+        this.diffFromPrevDay = diffFromPrevDay;
+    }
+
+
 
     public String getState() {
         return state;
